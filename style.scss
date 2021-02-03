@@ -183,6 +183,7 @@ a {
 
         @media screen and (max-with: $mobile) {
             grid-template-columns: 1fr;
+            grid-gap: 50px;
         }
 
         .news-card {
