@@ -140,6 +140,12 @@ a img {
   color: white;
 }
 
+@media screen and (max-with: 1024px) {
+  #banner .banner1 {
+    background-size: cover;
+  }
+}
+
 #banner .banner1:focus {
   outline: none;
 }
@@ -185,6 +191,12 @@ a img {
   color: white;
 }
 
+@media screen and (max-with: 1024px) {
+  #banner .banner2 {
+    background-size: cover;
+  }
+}
+
 #banner .banner2:focus {
   outline: none;
 }
@@ -228,6 +240,12 @@ a img {
   height: 100vh;
   text-align: center;
   color: white;
+}
+
+@media screen and (max-with: 1024px) {
+  #banner .banner3 {
+    background-size: cover;
+  }
 }
 
 #banner .banner3:focus {

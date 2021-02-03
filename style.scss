@@ -130,6 +130,10 @@ a {
             text-align: center;
             color: $color-blue;
 
+            @media screen and (max-with: $tablet) {
+                background-size: cover;
+            }
+
             &:focus {
                 outline: none;
             }
