@@ -1,11 +1,12 @@
-  
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400&display=swap");
 
-$color-gray:#74acd1;
+$color-gray: #74acd1;
 $color-blue: white;
 $color-black: #252525;
 $text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
 $box-shawod: 0 5px 7px rgba(0, 0, 0, 0.2);
+$tablet: 1024px;
+$mobile: 767px;
 
 * {
     margin: 0;
@@ -15,22 +16,49 @@ $box-shawod: 0 5px 7px rgba(0, 0, 0, 0.2);
 }
 
 // 導覽列
+#menu {
+    background-image: url(./img/iconfinder_menu.png);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-with: $tablet) {
+        display: block;
+        margin: 0 10px 0 auto;
+    }
+
+    @media screen and (max-with: $mobile) {
+        margin: 0 20px 0 auto;
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+    }
+}
 nav {
     display: grid;
     grid-template-columns: 15% auto 15%;
     text-align: center;
     background-color: $color-gray;
     padding: 30px;
-    color:$color-white;
+    color: $color-blue;
+
+    @media screen and (max-with: $tablet) {
+        grid-template-columns: 100% 0;
+    }
 
     link {
+        @media screen and (max-with: $tablet) {
+            grid-template-columns: none;
+        }
+
         a {
-            color:$color-white;
+            color: $color-blue;
             text-decoration: none;
             font-size: 16px;
             padding: 0 60px;
             transition: 0.3s;
-            display: inline-block;  // 行內區塊元素 不會自己一行必且可以縮放
+            display: inline-block; // 行內區塊元素 不會自己一行必且可以縮放
             vertical-align: 10px;
 
             &:hover {
@@ -39,22 +67,25 @@ nav {
             }
         }
     }
-
 }
 
 #social {
-    a {
-        transition: 0.3s;
-        padding: 0 10px;
+    @media screen and (max-with: $tablet) {
+        display: none;
+    }
+}
+a {
+    transition: 0.3s;
+    padding: 0 10px;
 
-        &:hover {
-            filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
-        }
+    &:hover {
+        filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
+        filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
+    }
 
-        img {
-            width: 20px;
-            vertical-align: -20px;
-        }
+    img {
+        width: 20px;
+        vertical-align: -20px;
     }
 }
 
@@ -62,7 +93,7 @@ nav {
     font-weight: 100;
     transition: 0.5s !important;
     font-size: 36px !important;
-    font-family: 'Passion One', cursive;
+    font-family: "Passion One", cursive;
     letter-spacing: 3px;
     padding-left: 3px;
 
@@ -71,7 +102,7 @@ nav {
     }
 
     span {
-        font-family: 'Passion One', cursive;
+        font-family: "Passion One", cursive;
         vertical-align: 3px;
         font-size: 30px;
     }
@@ -97,8 +128,8 @@ nav {
             background-image: url(./img/banner#{$i}.jpg);
             height: 100vh;
             text-align: center;
-            color: $color-white;
-    
+            color: $color-blue;
+
             &:focus {
                 outline: none;
             }
@@ -108,11 +139,27 @@ nav {
                 font-size: 72px;
                 letter-spacing: 20px;
                 text-shadow: $text-shadow;
+
+                @media screen and (max-with: $tablet) {
+                    padding: 550px 0 50px 20px;
+                }
+
+                @media screen and (max-with: $mobile) {
+                    padding: 300px 0 50px 20px;
+                    font-size: 32px;
+                }
             }
-    
+
             h2 {
                 font-size: 24px;
                 text-shadow: $text-shadow;
+
+                @media screen and (max-with: $mobile) {
+                    font-size: 20px;
+                    width: 60%;
+                    margin: 0 auto;
+                    line-height: 1.5;
+                }
             }
         }
     }
@@ -124,10 +171,19 @@ nav {
     margin: 0 auto;
     padding: 100px 0;
 
+    @media screen and (max-with: $tablet) {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
     #news-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
+
+        @media screen and (max-with: $mobile) {
+            grid-template-columns: 1fr;
+        }
 
         .news-card {
             box-shadow: $box-shawod;
@@ -157,6 +213,11 @@ nav {
     width: 1280px;
     margin: 0 auto;
     padding: 100px 0;
+    
+    @media screen and (max-with: $tablet) {
+        width: 100%;
+
+    }
 
     .work-card {
         text-align: center;
@@ -190,8 +251,7 @@ nav {
     }
 }
 
-
-// 聯絡 
+// 聯絡
 form {
     width: 1280px;
     margin: 0 auto;
@@ -209,7 +269,7 @@ form {
     }
 
     // 利用屬性選取器，語法：元素[屬性=值]
-    input[type=email] {
+    input[type="email"] {
         float: right;
     }
 
@@ -233,8 +293,8 @@ footer {
 
     a {
         text-decoration: none;
-        color: $color-white;
-        
+        color: $color-blue;
+
         padding: 20px 0;
     }
 }
@@ -243,7 +303,7 @@ footer {
 // 按鈕樣式
 .btn {
     background: $color-black;
-    color: $color-white;
+    color: $color-blue;
     padding: 15px 0;
     display: block;
     margin: 0 auto;
