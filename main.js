@@ -11,15 +11,20 @@ $("#works").slick({
     responsive: [
         {
             breakpoint: 1025,
-            slidesToShow: 3,
-            slidesToScroll: 1,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+            
 
         },
 
         {
             breakpoint: 767,
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
 
         }
        
