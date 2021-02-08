@@ -16,14 +16,14 @@
   display: none;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #menu {
     display: block;
     margin: 0 10px 0 auto;
   }
 }
 
-@media screen and (max-with: 767px) {
+@media screen and (max-width: 767px) {
   #menu {
     margin: 0 20px 0 auto;
     background-size: cover;
@@ -38,27 +38,36 @@ nav {
   -ms-grid-columns: 15% auto 15%;
       grid-template-columns: 15% auto 15%;
   text-align: center;
-  background-color: #74acd1;
-  padding: 30px;
-  color: white;
+  background: #f8f8f8;
+  padding: 35px 0;
+  -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 3;
+  width: 100%;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   nav {
     -ms-grid-columns: 100% 0;
         grid-template-columns: 100% 0;
   }
 }
 
-@media screen and (max-with: 1024px) {
-  nav link {
-    -ms-grid-columns: none;
-        grid-template-columns: none;
+@media screen and (max-width: 767px) {
+  nav {
+    padding: 20px 0;
   }
 }
 
-nav link a {
-  color: white;
+@media screen and (max-width: 1024px) {
+  nav #link {
+    display: none;
+  }
+}
+
+nav #link a {
+  color: #252525;
   text-decoration: none;
   font-size: 16px;
   padding: 0 60px;
@@ -68,31 +77,31 @@ nav link a {
   vertical-align: 10px;
 }
 
-nav link a:hover {
-  color: #74acd1;
+nav #link a:hover {
+  color: #aaa;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-@media screen and (max-with: 1024px) {
-  #social {
+@media screen and (max-width: 1024px) {
+  nav #social {
     display: none;
   }
 }
 
-a {
+nav #social a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 0 10px;
 }
 
-a:hover {
+nav #social a:hover {
   -webkit-filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
           filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
   filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
 }
 
-a img {
+nav #social a img {
   width: 20px;
   vertical-align: -20px;
 }
@@ -137,10 +146,11 @@ a img {
   background-image: url(./img/banner1.jpg);
   height: 100vh;
   text-align: center;
-  color: white;
+  color: #f8f8f8;
+  background-size: cover;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #banner .banner1 {
     background-size: cover;
   }
@@ -157,15 +167,15 @@ a img {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #banner .banner1 h1 {
     padding: 550px 0 50px 20px;
   }
 }
 
-@media screen and (max-with: 767px) {
+@media screen and (max-width: 767px) {
   #banner .banner1 h1 {
-    padding: 300px 0 50px 20px;
+    padding: 380px 0 50px 20px;
     font-size: 32px;
   }
 }
@@ -175,12 +185,12 @@ a img {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
 }
 
-@media screen and (max-with: 767px) {
+@media screen and (max-width: 767px) {
   #banner .banner1 h2 {
-    font-size: 20px;
+    font-size: 16px;
     width: 60%;
     margin: 0 auto;
-    line-height: 1.5;
+    line-height: 2;
   }
 }
 
@@ -188,10 +198,11 @@ a img {
   background-image: url(./img/banner2.jpg);
   height: 100vh;
   text-align: center;
-  color: white;
+  color: #f8f8f8;
+  background-size: cover;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #banner .banner2 {
     background-size: cover;
   }
@@ -208,15 +219,15 @@ a img {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #banner .banner2 h1 {
     padding: 550px 0 50px 20px;
   }
 }
 
-@media screen and (max-with: 767px) {
+@media screen and (max-width: 767px) {
   #banner .banner2 h1 {
-    padding: 300px 0 50px 20px;
+    padding: 380px 0 50px 20px;
     font-size: 32px;
   }
 }
@@ -226,12 +237,12 @@ a img {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
 }
 
-@media screen and (max-with: 767px) {
+@media screen and (max-width: 767px) {
   #banner .banner2 h2 {
-    font-size: 20px;
+    font-size: 16px;
     width: 60%;
     margin: 0 auto;
-    line-height: 1.5;
+    line-height: 2;
   }
 }
 
@@ -239,10 +250,11 @@ a img {
   background-image: url(./img/banner3.jpg);
   height: 100vh;
   text-align: center;
-  color: white;
+  color: #f8f8f8;
+  background-size: cover;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #banner .banner3 {
     background-size: cover;
   }
@@ -259,15 +271,15 @@ a img {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #banner .banner3 h1 {
     padding: 550px 0 50px 20px;
   }
 }
 
-@media screen and (max-with: 767px) {
+@media screen and (max-width: 767px) {
   #banner .banner3 h1 {
-    padding: 300px 0 50px 20px;
+    padding: 380px 0 50px 20px;
     font-size: 32px;
   }
 }
@@ -277,12 +289,12 @@ a img {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
 }
 
-@media screen and (max-with: 767px) {
+@media screen and (max-width: 767px) {
   #banner .banner3 h2 {
-    font-size: 20px;
+    font-size: 16px;
     width: 60%;
     margin: 0 auto;
-    line-height: 1.5;
+    line-height: 2;
   }
 }
 
@@ -292,7 +304,7 @@ a img {
   padding: 100px 0;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #news {
     width: 100%;
     padding: 50px 20px;
@@ -307,7 +319,7 @@ a img {
   grid-gap: 20px;
 }
 
-@media screen and (max-with: 767px) {
+@media screen and (max-width: 767px) {
   #news #news-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -342,9 +354,10 @@ a img {
   width: 1280px;
   margin: 0 auto;
   padding: 100px 0;
+  overflow: hidden;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   #works {
     width: 100%;
   }
@@ -381,7 +394,7 @@ a img {
 }
 
 #works .work-card small {
-  color: #74acd1;
+  color: #aaa;
 }
 
 form {
@@ -390,7 +403,7 @@ form {
   padding: 20px 0 100px;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   form {
     width: 100%;
     padding: 20px 20px 100px;
@@ -402,7 +415,7 @@ form input {
   padding: 10px;
 }
 
-@media screen and (max-with: 1024px) {
+@media screen and (max-width: 1024px) {
   form input {
     width: 100%;
     margin-bottom: 20px;
@@ -410,22 +423,22 @@ form input {
 }
 
 form input::-webkit-input-placeholder {
-  color: #74acd1;
+  color: #aaa;
   font-size: 14px;
 }
 
 form input:-ms-input-placeholder {
-  color: #74acd1;
+  color: #aaa;
   font-size: 14px;
 }
 
 form input::-ms-input-placeholder {
-  color: #74acd1;
+  color: #aaa;
   font-size: 14px;
 }
 
 form input::placeholder {
-  color: #74acd1;
+  color: #aaa;
   font-size: 14px;
 }
 
@@ -441,40 +454,40 @@ form textarea {
 }
 
 form textarea::-webkit-input-placeholder {
-  color: #74acd1;
+  color: #aaa;
   font-size: 14px;
 }
 
 form textarea:-ms-input-placeholder {
-  color: #74acd1;
+  color: #aaa;
   font-size: 14px;
 }
 
 form textarea::-ms-input-placeholder {
-  color: #74acd1;
+  color: #aaa;
   font-size: 14px;
 }
 
 form textarea::placeholder {
-  color: #74acd1;
+  color: #aaa;
   font-size: 14px;
 }
 
 footer {
-  background: #74acd1;
+  background: #aaa;
   padding: 50px 0;
   text-align: center;
 }
 
 footer a {
   text-decoration: none;
-  color: white;
+  color: #f8f8f8;
   padding: 20px 0;
 }
 
 .btn {
   background: #252525;
-  color: white;
+  color: #f8f8f8;
   padding: 15px 0;
   display: block;
   margin: 0 auto;

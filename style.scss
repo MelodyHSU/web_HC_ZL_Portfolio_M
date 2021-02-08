@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400&display=swap");
 
-$color-gray: #74acd1;
-$color-blue: white;
+$color-gray: #aaa;
+$color-white: #f8f8f8;
 $color-black: #252525;
 $text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
 $box-shawod: 0 5px 7px rgba(0, 0, 0, 0.2);
-$tablet: 1024px;
-$mobile: 767px;
+$tablet: 1024px; // 平板尺寸
+$mobile: 767px; // 手機尺寸
 
 * {
     margin: 0;
@@ -23,37 +23,45 @@ $mobile: 767px;
     cursor: pointer;
     display: none;
 
-    @media screen and (max-with: $tablet) {
+    @media screen and (max-width: $tablet) {
         display: block;
         margin: 0 10px 0 auto;
     }
 
-    @media screen and (max-with: $mobile) {
+    @media screen and (max-width: $mobile) {
         margin: 0 20px 0 auto;
         background-size: cover;
         width: 40px;
         height: 40px;
     }
 }
+
 nav {
     display: grid;
     grid-template-columns: 15% auto 15%;
     text-align: center;
-    background-color: $color-gray;
-    padding: 30px;
-    color: $color-blue;
+    background: $color-white;
+    padding: 35px 0;
+    box-shadow: $box-shawod;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
 
-    @media screen and (max-with: $tablet) {
+    @media screen and (max-width: $tablet) {
         grid-template-columns: 100% 0;
     }
 
-    link {
-        @media screen and (max-with: $tablet) {
-            grid-template-columns: none;
+    @media screen and (max-width: $mobile) {
+        padding: 20px 0;
+    }
+
+    #link {
+        @media screen and (max-width: $tablet) {
+            display: none;
         }
 
         a {
-            color: $color-blue;
+            color: $color-black;
             text-decoration: none;
             font-size: 16px;
             padding: 0 60px;
@@ -67,25 +75,26 @@ nav {
             }
         }
     }
-}
 
-#social {
-    @media screen and (max-with: $tablet) {
-        display: none;
-    }
-}
-a {
-    transition: 0.3s;
-    padding: 0 10px;
+    #social {
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
 
-    &:hover {
-        filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
-        filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
-    }
+        a {
+            transition: 0.3s;
+            padding: 0 10px;
 
-    img {
-        width: 20px;
-        vertical-align: -20px;
+            &:hover {
+                filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
+                filter: invert(65%) sepia(0%) saturate(2628%) hue-rotate(143deg) brightness(107%) contrast(86%);
+            }
+
+            img {
+                width: 20px;
+                vertical-align: -20px;
+            }
+        }
     }
 }
 
@@ -108,7 +117,6 @@ a {
     }
 }
 
-// 輪播大banner輪播大banner
 #banner {
     .slick-prev {
         left: 50px;
@@ -128,9 +136,10 @@ a {
             background-image: url(./img/banner#{$i}.jpg);
             height: 100vh;
             text-align: center;
-            color: $color-blue;
+            color: $color-white;
+            background-size: cover;
 
-            @media screen and (max-with: $tablet) {
+            @media screen and (max-width: $tablet) {
                 background-size: cover;
             }
 
@@ -144,12 +153,12 @@ a {
                 letter-spacing: 20px;
                 text-shadow: $text-shadow;
 
-                @media screen and (max-with: $tablet) {
+                @media screen and (max-width: $tablet) {
                     padding: 550px 0 50px 20px;
                 }
 
-                @media screen and (max-with: $mobile) {
-                    padding: 300px 0 50px 20px;
+                @media screen and (max-width: $mobile) {
+                    padding: 380px 0 50px 20px;
                     font-size: 32px;
                 }
             }
@@ -158,11 +167,11 @@ a {
                 font-size: 24px;
                 text-shadow: $text-shadow;
 
-                @media screen and (max-with: $mobile) {
-                    font-size: 20px;
+                @media screen and (max-width: $mobile) {
+                    font-size: 16px;
                     width: 60%;
                     margin: 0 auto;
-                    line-height: 1.5;
+                    line-height: 2;
                 }
             }
         }
@@ -175,7 +184,7 @@ a {
     margin: 0 auto;
     padding: 100px 0;
 
-    @media screen and (max-with: $tablet) {
+    @media screen and (max-width: $tablet) {
         width: 100%;
         padding: 50px 20px;
     }
@@ -185,7 +194,7 @@ a {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
 
-        @media screen and (max-with: $mobile) {
+        @media screen and (max-width: $mobile) {
             grid-template-columns: 1fr;
             grid-gap: 50px;
         }
@@ -218,8 +227,10 @@ a {
     width: 1280px;
     margin: 0 auto;
     padding: 100px 0;
+    // 溢出：隱藏
+    overflow: hidden;
 
-    @media screen and (max-with: $tablet) {
+    @media screen and (max-width: $tablet) {
         width: 100%;
     }
 
@@ -255,13 +266,13 @@ a {
     }
 }
 
-// 聯絡
+// 聯絡 KID
 form {
     width: 1280px;
     margin: 0 auto;
     padding: 20px 0 100px;
 
-    @media screen and (max-with: $tablet) {
+    @media screen and (max-width: $tablet) {
         width: 100%;
         padding: 20px 20px 100px;
     }
@@ -270,7 +281,7 @@ form {
         width: 49%;
         padding: 10px;
 
-        @media screen and (max-with: $tablet) {
+        @media screen and (max-width: $tablet) {
             width: 100%;
             margin-bottom: 20px;
         }
@@ -307,7 +318,7 @@ footer {
 
     a {
         text-decoration: none;
-        color: $color-blue;
+        color: $color-white;
 
         padding: 20px 0;
     }
@@ -317,7 +328,7 @@ footer {
 // 按鈕樣式
 .btn {
     background: $color-black;
-    color: $color-blue;
+    color: $color-white;
     padding: 15px 0;
     display: block;
     margin: 0 auto;
