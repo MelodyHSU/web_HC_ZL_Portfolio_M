@@ -38,7 +38,7 @@ nav {
   -ms-grid-columns: 15% auto 15%;
       grid-template-columns: 15% auto 15%;
   text-align: center;
-  background: #f8f8f8;
+  background: #265472;
   padding: 35px 0;
   -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
@@ -67,7 +67,7 @@ nav {
 }
 
 nav #link a {
-  color: #252525;
+  color: #d4c0b8;
   text-decoration: none;
   font-size: 16px;
   padding: 0 60px;
@@ -78,7 +78,7 @@ nav #link a {
 }
 
 nav #link a:hover {
-  color: #aaa;
+  color: #72889c;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -146,7 +146,7 @@ nav #social a img {
   background-image: url(./img/banner1.jpg);
   height: 100vh;
   text-align: center;
-  color: #f8f8f8;
+  color: #265472;
   background-size: cover;
 }
 
@@ -198,7 +198,7 @@ nav #social a img {
   background-image: url(./img/banner2.jpg);
   height: 100vh;
   text-align: center;
-  color: #f8f8f8;
+  color: #265472;
   background-size: cover;
 }
 
@@ -250,7 +250,7 @@ nav #social a img {
   background-image: url(./img/banner3.jpg);
   height: 100vh;
   text-align: center;
-  color: #f8f8f8;
+  color: #265472;
   background-size: cover;
 }
 
@@ -394,7 +394,7 @@ nav #social a img {
 }
 
 #works .work-card small {
-  color: #aaa;
+  color: #72889c;
 }
 
 form {
@@ -423,22 +423,22 @@ form input {
 }
 
 form input::-webkit-input-placeholder {
-  color: #aaa;
+  color: #72889c;
   font-size: 14px;
 }
 
 form input:-ms-input-placeholder {
-  color: #aaa;
+  color: #72889c;
   font-size: 14px;
 }
 
 form input::-ms-input-placeholder {
-  color: #aaa;
+  color: #72889c;
   font-size: 14px;
 }
 
 form input::placeholder {
-  color: #aaa;
+  color: #72889c;
   font-size: 14px;
 }
 
@@ -454,40 +454,40 @@ form textarea {
 }
 
 form textarea::-webkit-input-placeholder {
-  color: #aaa;
+  color: #72889c;
   font-size: 14px;
 }
 
 form textarea:-ms-input-placeholder {
-  color: #aaa;
+  color: #72889c;
   font-size: 14px;
 }
 
 form textarea::-ms-input-placeholder {
-  color: #aaa;
+  color: #72889c;
   font-size: 14px;
 }
 
 form textarea::placeholder {
-  color: #aaa;
+  color: #72889c;
   font-size: 14px;
 }
 
 footer {
-  background: #aaa;
+  background: #72889c;
   padding: 50px 0;
   text-align: center;
 }
 
 footer a {
   text-decoration: none;
-  color: #f8f8f8;
+  color: #265472;
   padding: 20px 0;
 }
 
 .btn {
-  background: #252525;
-  color: #f8f8f8;
+  background: #d4c0b8;
+  color: #265472;
   padding: 15px 0;
   display: block;
   margin: 0 auto;
@@ -501,9 +501,9 @@ footer a {
 }
 
 .btn:hover {
-  border: 1px solid #252525;
+  border: 1px solid #d4c0b8;
   background: white;
-  color: #252525;
+  color: #d4c0b8;
 }
 
 .title-big {
