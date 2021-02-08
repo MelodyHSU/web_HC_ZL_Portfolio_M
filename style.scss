@@ -46,6 +46,7 @@ nav {
     position: fixed;
     z-index: 3;
     width: 100%;
+    height: 120px;
 
     @media screen and (max-width: $tablet) {
         grid-template-columns: 100% 0;
@@ -55,9 +56,47 @@ nav {
         padding: 20px 0;
     }
 
+
+    #link-work {
+        position: relative;
+        display: inline-block;
+        padding: 0 60px;
+        vertical-align: 10px;
+        height: 300px;
+// 滑入後顯示 子分頁
+        &:hover .sub-link{
+            // display: block;
+            transform: scale(1);
+
+        }
+    }
+
+    .sub-link {
+        // display: none;
+        transform: scale(0);
+        transition: 1s;
+        transform-origin: top ;
+        position: absolute;
+        top: 60px;
+        left: 5px;
+        background: $color-white;
+
+        a {
+            display: block !important;
+            padding: 30px 80px !important; 
+            width: 240px !important;
+        }
+    }
+
+    
+
     #link {
         @media screen and (max-width: $tablet) {
             display: none;
+        }
+
+        div {
+            color: $color-black;
         }
 
         a {

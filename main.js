@@ -6,7 +6,7 @@ $("#banner").slick({
 
 $("#works").slick({
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 3,
 
     responsive: [
         {
